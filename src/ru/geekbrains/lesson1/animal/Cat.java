@@ -16,8 +16,13 @@ public class Cat extends Animal implements Participant {
         this.jumpHeight = jumpHeight;
     }
 
+    // в старом конструкторе мы дали возможность не определять ряд полей,
+    // кажется, при обращении к ним в дальнейшем, можем получить ошибку
     public Cat(String name, Color color) {
         super(name, color, 0);
+        this.isOnDistance = true;
+        this.runDistance = 0;
+        this.jumpHeight = 0;
     }
 
     @Override
@@ -51,7 +56,7 @@ public class Cat extends Animal implements Participant {
             isOnDistance = false;
             return;
         }
-        System.out.println(String.format("Собака %s пругнула на высоту %d", getName(), height));
+        System.out.println(String.format("Собака %s пругнула на высоту %d \n", getName(), height));
     }
 
     @Override
@@ -59,6 +64,13 @@ public class Cat extends Animal implements Participant {
         isOnDistance = false;
         System.out.println("Кошка не умеет плавать");
         // throw new UnsupportedOperationException("Кошка не умеет плавать");
+    }
+
+    @Override
+    public void personalInformation() {
+        System.out.format("Кот %s в возрасте %d цвет - %s может прыгнуть на высоту %d" +
+                " и при этом пробежать на расстояние %d \n", getName(), getAge(), getColor().getName(),
+                this.jumpHeight, this.runDistance);
     }
 
     public void setRunDistance(int runDistance) {

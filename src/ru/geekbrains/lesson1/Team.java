@@ -16,4 +16,18 @@ public class Team {
     public Participant[] getParticipants() {
         return participants;
     }
+
+    public void allInfo(){
+        for (Participant participant : participants){
+            participant.personalInformation();
+        }
+    }
+
+    public void memberInfo(){
+        for (Participant participant : participants){
+            if (participant.isOnDistance()) {
+                participant.personalInformation();
+            }
+        }
+    }
 }
