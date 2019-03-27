@@ -5,7 +5,7 @@ import ru.geekbrains.lesson1.enums.Color;
 
 import java.io.PrintStream;
 
-public class Human extends Animal implements Participant {
+public class Human extends Animal{
 
     private boolean isOnDistance;
     private int runDistance;

@@ -3,7 +3,7 @@ package ru.geekbrains.lesson1.animal;
 import ru.geekbrains.lesson1.Participant;
 import ru.geekbrains.lesson1.enums.Color;
 
-public class Dog extends Animal implements Participant {
+public class Dog extends Animal{
 
     private boolean isOnDistance;
     private int runDistance;

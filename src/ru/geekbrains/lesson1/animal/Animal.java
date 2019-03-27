@@ -1,8 +1,9 @@
 package ru.geekbrains.lesson1.animal;
 
+import ru.geekbrains.lesson1.Participant;
 import ru.geekbrains.lesson1.enums.Color;
 
-public abstract class Animal {
+public abstract class Animal implements Participant {
 
     private String name;
     private Color color;
