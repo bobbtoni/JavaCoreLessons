@@ -1,7 +1,7 @@
 package ru.geekbrains.lesson5;
 
 public class Application {
-    static final int size = 11;
+    static final int size = 10000000;
     public static void main(String[] args){
         oneThreadMethod();
         try {
@@ -88,9 +88,6 @@ public class Application {
         }
         System.arraycopy(extraArr, 0, arr, h*countThread, extraH);
         System.out.println("Время выполнения:  " + (System.currentTimeMillis()-timeBegin));
-        for (int i = 0; i < size; i++) {
-            System.out.print(arr[i] + " ");
-        }
     }
 
     private static class SuperPlusException extends Exception{
